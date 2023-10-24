@@ -1,0 +1,19 @@
+
+<div class="container">
+    <form [formGroup] ="form" (submit)="SaveChanges()">
+
+    
+    <mat-form-field appearance="outline">
+        <mat-label>Name</mat-label>
+        <input matInput formControlName="name" placeholder="Name of genre" >
+<mat-error *ngIf="form.invalid">{{GetErrorMesssage()}}</mat-error>
+    </mat-form-field>
+   
+
+    <div>
+    <button color="primary" [disabled]="form.invalid"  mat-flat-button >Save</button>
+<button mat-stroked-button   color="primary"  routerLink="/genre" >Cancel</button>
+</div>
+
+</form>
+</div>
